@@ -7,19 +7,16 @@ class HoppeSecuDoorWindowSensor extends ZwaveDevice {
 	async onMeshInit() {
 		
 		// enable debugging
-		this.enableDebug();
+		// this.enableDebug();
 		
 		// print the node's info to the console
-		this.printNode();
+		// this.printNode();
 
-		// register the `measure_battery` capability with COMMAND_CLASS_BATTERY and with the default system capability handler
- 		this.registerCapability('measure_battery', 'BATTERY');
-	
-		this.registerCapability('alarm_contact', 'SENSOR_BINARY', {
-			getOpts: {
-				getOnOnline: true, // use only for battery devices
-			}
-		});
+		// register device capabilities
+		this.registerCapability('alarm_contact', 'NOTIFICATION');
+		this.registerCapability('alarm_tamper', 'NOTIFICATION');
+		this.registerCapability('alarm_battery', 'BATTERY');
+		this.registerCapability('measure_battery', 'BATTERY');
 	}
 }
 module.exports = HoppeSecuDoorWindowSensor;
