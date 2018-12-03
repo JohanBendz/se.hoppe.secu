@@ -1,0 +1,274 @@
+{
+  "id": "se.hoppe.secu",
+  "version": "1.0.0",
+  "compatibility": ">=1.5.0",
+  "sdk": 2,
+  "name": {
+    "en": "Hoppe Secu"
+  },
+  "description": {
+    "en": "Adds support for Hoppe SecuSignal devices."
+  },
+  "category": [
+    "security",
+    "appliances"
+  ],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Johan Bendz",
+    "email": "johan_bendz@hotmail.com"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+          "username": "JohanBendz"
+        }
+    }
+  },
+  "bugs":{
+    "url": "https://github.com/JohanBendz/se.hoppe.secu/issues"
+  },
+  "drivers": [
+    {
+      "id": "FG-FR404-ZW-HF",
+      "Name": {
+        "en": "Door/window handle sensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_contact"
+      ],
+      "images": {
+        "large": "",
+        "small": ""
+      },
+      "tags": {
+        "en": [
+          "door sensor",
+          "window sensor",
+          "magnet sensor",
+          "contact sensor"
+        ]
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": true
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "zwave": {
+        "manufacturerId": [787],
+        "productTypeId": [1],
+        "productId": [1],
+        "wakeUpInterval": 43200,
+        "learnmode": {
+          "image": "/drivers/FG-FR404-ZW-HF/assets/learnmode.svg",
+        "instruction": {
+        "en": "Automatic inclusion\nWhen batteries are inserted, the device is in automatic include mode for about one minute (Network Wide Inclusion, NWI). If so, the device should be added now. If not, see manual inclusion. \n\nManual inclusion\nOperate the handle six times fast to include the device."
+        }
+        },
+        "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2089/Manual_Wirelesshandle_V10_gb.pdf",
+        "zwaveAllianceProductId": 2089,
+        "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17025414",
+        "associationGroups": [1,2,3],
+        "associationGroupsOptions": {
+          "1": {
+          "hint": {
+            "en": "Z-Wave Plus Lifeline"
+              }
+          },
+        "2": {
+              "hint": {
+            "en": "Sensor status\nThe sensor will send control commands to nodes in this group when the status of the sensor changes."
+              }
+            },
+          "3": {
+              "hint": {
+            "en": "Sensor status\nThe sensor will send control commands to nodes in this group when the sensor is opened only."
+              }
+            }
+      },
+      "unlearnmode": {
+        "instruction": {
+        "en": "Start the exclusion mode on the Z-Wave controller.\nPress the button on the device three times fast. The device will now be removed from the Z-Wave-network."
+        }
+      }
+    },
+    "settings": [
+      {
+        "type": "group",
+        "label": {
+          "en": "Association group 2"
+        },
+        "children": [
+          {
+            "id": "1",
+            "type": "dropdown",
+            "value": 0,
+            "label": {
+              "en": "Command sent to association group 2"
+            },
+            "hint": {
+                "en": "Select what type of command to be sent to nodes in association group 2. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
+            },
+            "values": [
+              {
+                              "id": "0",
+                              "label": { "en": "Basic" }
+                          },
+              {
+                              "id": "1",
+                              "label": { "en": "Switch Binary" }
+                          },
+                          {
+                              "id": "2",
+                              "label": { "en": "Switch All" }
+                          },
+                          {
+                              "id": "3",
+                              "label": { "en": "Switch Multilevel" }
+                          }
+                      ],
+            "_size": 1
+          },
+          {
+            "id": "2",
+                      "type": "number",
+            "label": {
+                        "en": "Select value that should be sent to association group 2"
+            },
+            "hint": {
+              "en": "Select what value that should be sent to association group 2 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
+            },
+            "value": -1,
+            "attr": {
+              "min": -1,
+              "max": 99
+            },
+            "_size": 1
+          },
+          {
+            "id": "3",
+            "type": "checkbox",
+            "value": false,
+            "label": {
+              "en": "Invert signals sent to association group 2"
+            },
+            "hint": {
+              "en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed instead of the opposite."
+            },
+            "_size": 1
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+            "en": "Association group 3"
+          },
+        "children": [
+          {
+            "id": "4",
+            "type": "dropdown",
+            "value": 0,
+            "label": { "en": "Command sent to association group 3" },
+            "hint": {
+                "en": "Select what type of command to be sent to nodes in association group 2. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
+            },
+            "values": [
+              {
+                              "id": 0,
+                              "label": { "en": "Basic" }
+                          },
+              {
+                              "id": 1,
+                              "label": { "en": "Switch Binary" }
+                          },
+                          {
+                              "id": 2,
+                              "label": { "en": "Switch All" }
+                          },
+                          {
+                              "id": 3,
+                              "label": { "en": "Switch Multilevel" }
+                          }
+                      ]
+          },
+          {
+            "id": "5",
+            "type": "number",
+            "value": -1,
+            "attr": {
+              "min": -1,
+              "max": 99
+            },
+            "_size": 1,
+            "label": {
+              "en": "Select value that should be sent to association group 3"
+            },
+            "hint": {
+              "en": "Select what value that should be sent to association group 3 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
+            }
+          },
+          {
+            "id": "6",
+            "type": "checkbox",
+            "value": false,
+            "label": {
+              "en": "Invert signals sent to association group 3"
+            },
+            "hint": {
+              "en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed instead of the opposite."
+            },
+            "_size": 1
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "type": "checkbox",
+        "value": true,
+        "label": { "en": "LED-Indicator" },
+        "hint": {
+          "en": "Select if the LED indicator shold be active or not. Turn it off to reduce the power consumption."
+        },
+        "_size": 1
+      },
+      {
+        "id": "8",
+        "type": "dropdown",
+        "value": 0,
+        "values": [
+          {
+            "id": "0",
+            "label": { "en": "Notification" }
+          },
+          {
+            "id": "1",
+            "label": { "en": "Sensor binary" }
+          }
+        ],
+        "label": {
+          "en": "Type of command to be sent in the Lifeline"
+        },
+        "hint": {
+          "en": "0 - Notification, 1 - Sensor binary."
+        },
+        "_size": 1
+        }
+    ]
+    }
+  ]
+}
