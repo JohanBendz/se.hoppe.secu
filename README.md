@@ -3,6 +3,8 @@
 Adds support for Happy SecuSignal devices.
 
 ## What's new
+### v1.0.1
+A vital file was missing..
 
 ### v1.0.0
 This is the first version.
