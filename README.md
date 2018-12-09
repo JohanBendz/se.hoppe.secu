@@ -1,12 +1,16 @@
-# Hoppe SecuSignal
+# Hoppe SecuSignal Window/Door Handles
 
-Adds support for Happy SecuSignal devices.
+This App adds support for Hoppe SecuSignal Window/Door Handles with Z-wave technology.
+
+Hoppe SecuSignal Window/Door Handle devices can also be found mounted in a number of known Window brands, such as:
+- Elitfönster (swedish brand)
+- ERA fönster (swedish brand)
 
 ## What's new
 ### v1.0.1
-A vital file was missing..
+Ooops.. a few vital files was missing..
 
 ### v1.0.0
-This is the first version.
+First release.
 
 If you experience a bug please report it here: https://github.com/JohanBendz/se.hoppe.secu/issues
