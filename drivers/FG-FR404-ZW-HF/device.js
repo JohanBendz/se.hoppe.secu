@@ -13,8 +13,8 @@ class HoppeSecuDoorWindowSensor extends ZwaveDevice {
 		this.printNode();
 
 		// register device capabilities
-		this.registerCapability('alarm_contact', 'NOTIFICATION');
-		this.registerCapability('alarm_tamper', 'NOTIFICATION');
+		this.registerCapability('alarm_contact', 'BASIC');
+		this.registerCapability('alarm_tamper', 'BASIC');
 		this.registerCapability('alarm_battery', 'BATTERY');
 		this.registerCapability('measure_battery', 'BATTERY');
 		
