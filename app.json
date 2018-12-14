@@ -1,10 +1,10 @@
 {
   "id": "se.hoppe.secu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
-    "en": "Hoppe Secu"
+    "en": "Hoppe SucuSignal"
   },
   "description": {
     "en": "Adds support for Hoppe SecuSignal devices."
@@ -57,36 +57,26 @@
         "small": "drivers/FG-FR404-ZW-HF/assets/images/small.png"
       },
       "zwave": {
-        "manufacturerId": [787],
-        "productTypeId": [1],
-        "productId": [1],
+        "manufacturerId": 787,
+        "productTypeId": 1,
+        "productId": 1,
         "wakeUpInterval": 43200,
         "learnmode": {
           "image": "/drivers/FG-FR404-ZW-HF/assets/learnmode.svg",
         "instruction": {
-        "en": "Operate the handle six times within three seconds to include the device."
+        "en": "Operate the handle six times within three seconds to include the device"
         }
         },
         "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2089/Manual_Wirelesshandle_V10_gb.pdf",
         "zwaveAllianceProductId": 2089,
         "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17025414",
-        "associationGroups": [1,2,3],
+        "associationGroups": 1,
         "associationGroupsOptions": {
           "1": {
           "hint": {
             "en": "The Door/Window handle sensor will send notification report and battery report to the associated nodes. (Z-wave lifeline)"
               }
-          },
-          "2": {
-              "hint": {
-            "en": "The Door/Window handle sensor status\nThe Door/Window handle sensor will send control commands to nodes in this group when the status of the sensor changes."
-              }
-            },
-          "3": {
-              "hint": {
-            "en": "The Door/Window handle sensor status\nThe Door/Window handle sensor will send control commands to nodes in this group when the sensor is opened only."
-              }
-            }
+          }
       },
       "unlearnmode": {
         "instruction": {
@@ -94,72 +84,6 @@
         }
       },
       "settings": [
-        {
-          "id": "BASIC_SET_command",
-          "zwave": {
-            "index": 14,
-            "size": 1
-          },
-          "type": "dropdown",
-          "value": "0",
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "BASIC_SET is not send during alarm (default)",
-                "nl": "BASIC_SET wordt niet gestuurd tijdens een alarm (standaard)"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "BASIC_SET is send during alarm",
-                "nl": "BASIC_SET wordt gestuurd tijdens een alarm"
-              }
-            }
-          ],
-          "label": {
-            "en": "Enable BASIC SET command",
-            "nl": "BASIC SET command inschakelen"
-          },
-          "hint": {
-            "en": "Door/Window Sensor can send BASIC SET command to nodes associated with group 2.",
-            "nl": "Door/Window Sensor kan BASIC SET commando's versturen naar nodes gekoppeld aan groep 2."
-          }
-        },
-        {
-          "id": "BASIC_SET_reversed",
-          "zwave": {
-            "index": 15,
-            "size": 1
-          },
-          "type": "dropdown",
-          "value": "0",
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "ON when contact opened, OFF when closed (default)",
-                "nl": "AAN bij open contact, UIT bij gesloten (standaard)"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "OFF when contact opened, ON when closed",
-                "nl": "UIT bij open contact, AAN bij gesloten"
-              }
-            }
-          ],
-          "label": {
-            "en": "Reverse BASIC SET command",
-            "nl": "BASIC SET command logica"
-          },
-          "hint": {
-            "en": "Door/Window Sensor can reverse its value of BASIC SET when the alarm is triggered.",
-            "nl": "Door/Window Sensor kan de waarde van het BASIC SET commando omwisselen wanneer een alarm geactiveerd wordt."
-          }
-        },
         {
           "id": "low_battery",
           "zwave": {
