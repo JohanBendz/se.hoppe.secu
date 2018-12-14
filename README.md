@@ -7,6 +7,10 @@ Hoppe SecuSignal Window/Door Handle devices can also be found mounted in a numbe
 - ERA fönster (swedish brand)
 
 ## What's new
+
+### v1.0.2
+Listener added, BASIC for now.
+
 ### v1.0.1
 Ooops.. a few vital files was missing..
 
