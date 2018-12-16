@@ -58,8 +58,8 @@
       },
       "zwave": {
         "manufacturerId": 787,
-        "productTypeId": 1,
-        "productId": 1,
+        "productTypeId": [1],
+        "productId": [1],
         "wakeUpInterval": 43200,
         "learnmode": {
           "image": "/drivers/FG-FR404-ZW-HF/assets/learnmode.svg",
