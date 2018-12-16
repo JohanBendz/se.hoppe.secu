@@ -70,7 +70,7 @@
         "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2089/Manual_Wirelesshandle_V10_gb.pdf",
         "zwaveAllianceProductId": 2089,
         "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17025414",
-        "associationGroups": 1,
+        "associationGroups": [1],
         "associationGroupsOptions": {
           "1": {
           "hint": {
