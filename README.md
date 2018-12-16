@@ -8,16 +8,10 @@ Hoppe SecuSignal Window/Door Handle devices can also be found mounted in a numbe
 
 ## What's new
 
-### v1.0.3
-Fix for one more oops.. ;)
+### v1.1.0
+First official release.
 
-### v1.0.2
-Listener added, BASIC for now.
-
-### v1.0.1
-Ooops.. a few vital files was missing..
-
-### v1.0.0
-First release.
+- Reports open/closed status for the handle.
+- Reports battery status for the handle.
 
 If you experience a bug please report it here: https://github.com/JohanBendz/se.hoppe.secu/issues
