@@ -8,6 +8,9 @@ Hoppe SecuSignal Window/Door Handle devices can also be found mounted in a numbe
 
 ## What's new
 
+### v1.0.3
+Fix for one more oops.. ;)
+
 ### v1.0.2
 Listener added, BASIC for now.
 
