@@ -4,10 +4,10 @@
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
-    "en": "Hoppe Secu Signal"
+    "en": "Hoppe SecuSignal"
   },
   "description": {
-    "en": "Adds support for Hoppe Secu Signal devices."
+    "en": "Adds support for Hoppe SecuSignal devices."
   },
   "category": [
     "security",
