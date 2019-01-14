@@ -1,6 +1,6 @@
 {
   "id": "se.hoppe.secu",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
@@ -17,8 +17,10 @@
     "en": [
      "door sensor",
      "window sensor",
-     "magnet sensor",
-     "contact sensor"
+     "handle",
+     "window lock",
+     "Hoppe",
+     "Z-wave"
     ]
   },
   "images": {
