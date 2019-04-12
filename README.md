@@ -1,4 +1,4 @@
-# Hoppe SecuSignal Window/Door Handles
+# Hoppe Z-wave SecuSignal Window/Door Handles
 
 This App adds support for Hoppe SecuSignal Window/Door Handles with Z-wave technology.
 
