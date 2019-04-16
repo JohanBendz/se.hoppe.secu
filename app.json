@@ -1,13 +1,15 @@
 {
   "id": "se.hoppe.secu",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
-    "en": "Hoppe SecuSignal"
+    "en": "Hoppe Z-wave Handles",
+    "sv": "Hoppe Z-wave Handtag"
   },
   "description": {
-    "en": "Adds support for Hoppe SecuSignal devices."
+    "en": "Adds support for Hoppe Z-wave Handles.",
+    "sv": "Lägger till stöd för Hoppes Z-wave handtag."
   },
   "category": [
     "security",
@@ -17,10 +19,14 @@
     "en": [
      "door sensor",
      "window sensor",
-     "handle",
-     "window lock",
-     "Hoppe",
-     "Z-wave"
+     "magnet sensor",
+     "contact sensor"
+    ],
+    "sv": [
+     "dörrsensor",
+     "fönstersensor",
+     "magnetsensor",
+     "kontaktsensor"
     ]
   },
   "images": {
