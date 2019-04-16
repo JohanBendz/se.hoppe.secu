@@ -90,8 +90,8 @@
       },
       "unlearnmode": {
         "instruction": {
-        "en": "Start the exclusion mode on the Z-Wave controller.\nOperate the handle six times within three seconds. The device will now be removed from the Z-Wave-network.",
-        "sv": "Starta exkluderingen.\nÖppna och stäng sedan handtaget sex gånger inom loppet av tre sekunder. Enheten kommer då att bli bortkopplad från Z-wave nätverket."
+        "en": "Start the exclusion mode on the Z-Wave controller.\nOperate the handle six times within three seconds.\nThe device will now be removed from the Z-Wave-network.\nA successful exclusion is indicated by a red LED blinking once.",
+        "sv": "Starta exkluderingen.\nÖppna och stäng sedan handtaget sex gånger inom loppet av tre sekunder.\nEnheten kommer då att bli bortkopplad från Z-wave nätverket.\nEn lycked exkludering indikeras genom att lysdioden blinkar rött en gång."
         }
       },
       "settings": [
