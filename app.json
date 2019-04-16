@@ -72,8 +72,8 @@
         "learnmode": {
           "image": "/drivers/FG-FR404-ZW-HF/assets/learnmode.svg",
         "instruction": {
-        "en": "Operate the handle six times within three seconds to include the device",
-        "sv": "Öppna och stäng handtaget sex gånger inom lopper av tre sekunder för att inkludera enheten"
+        "en": "With the door/window open, operate the handle six times within three seconds to include the device.\nA successful inclusion is indicated by a green LED blinking once.",
+        "sv": "Med dörren/fönstret öppet, öppna och stäng handtaget sex gånger inom lopper av tre sekunder för att inkludera enheten.\nEn lycked inkludering indikeras genom att lysdioden blinkar grönt en gång."
         }
         },
         "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2089/Manual_Wirelesshandle_V10_gb.pdf",
