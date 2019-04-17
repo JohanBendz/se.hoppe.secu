@@ -14,13 +14,18 @@ class HoppeSecuDoorWindowSensor extends ZwaveDevice {
 
 		// register device capabilities
 		this.registerCapability('alarm_contact', 'NOTIFICATION');
-		this.registerCapability('alarm_battery', 'BATTERY');
+		this.registerCapability('alarm_generic', 'NOTIFICATION');
 		this.registerCapability('measure_battery', 'BATTERY');
 		
-		// register a report listener
+		// register report listeners
 		this.registerReportListener('SWITCH_BINARY', 'SWITCH_BINARY_REPORT', ( rawReport, parsedReport ) => {
 		     console.log('registerReportListener', rawReport, parsedReport);
 		});
+		
+		this.registerReportListener('NOTIFICATION', 'NOTIFICATION_REPORT', ( rawReport, parsedReport ) => {
+		     console.log('registerReportListener', rawReport, parsedReport);
+		});
+		
 	}
 }
 module.exports = HoppeSecuDoorWindowSensor;
