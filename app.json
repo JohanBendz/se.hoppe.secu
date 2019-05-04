@@ -58,7 +58,8 @@
       "capabilities": [
         "alarm_contact",
         "alarm_battery",
-        "measure_battery"
+        "measure_battery",
+        "alarm_generic"
       ],
       "images": {
         "large": "drivers/FG-FR404-ZW-HF/assets/images/large.png",
