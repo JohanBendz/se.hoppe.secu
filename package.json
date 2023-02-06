@@ -1,0 +1,18 @@
+{
+  "name": "se.hoppe.secu",
+  "version": "2.0.0",
+  "description": "Adds support for Hoppe Secu Signal Handles",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Hoppe",
+    "Z-wave"
+  ],
+  "author": "Johan Bendz",
+  "license": "GNU",
+  "dependencies": {
+    "homey-zwavedriver": "^2.1.10"
+  }
+}
