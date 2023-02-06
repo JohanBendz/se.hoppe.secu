@@ -1,0 +1,83 @@
+{
+  "name": {
+    "en": "Door/Window handle sensor",
+    "sv": "Dörr-/Fönsterhandtag med sensor"
+  },
+  "class": "sensor",
+  "platforms": ["local"],
+  "connectivity": ["zwave"],
+  "capabilities": [
+    "alarm_contact",
+    "alarm_battery",
+    "measure_battery"
+  ],
+  "energy": {
+    "batteries": ["INTERNAL"]
+  },
+  "images": {
+    "large": "drivers/FG-FR404-ZW-HF/assets/images/large.png",
+    "small": "drivers/FG-FR404-ZW-HF/assets/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 787,
+    "productTypeId": [
+      1
+    ],
+    "productId": [
+      1
+    ],
+    "wakeUpInterval": 43200,
+    "learnmode": {
+      "image": "/drivers/FG-FR404-ZW-HF/assets/learnmode.svg",
+      "instruction": {
+        "en": "Operate the handle six times within three seconds to include the device",
+        "sv": "Öppna och stäng handtaget sex gånger inom lopper av tre sekunder för att inkludera enheten"
+      }
+    },
+    "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2089/Manual_Wirelesshandle_V10_gb.pdf",
+    "zwaveAllianceProductId": 2089,
+    "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17025414",
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "The Door/Window handle sensor will send notification report and battery report to the associated nodes. (Z-wave lifeline)",
+          "sv": "Dörr-/Fönsterhantaget sänder notifiering och batterirapport till associerade enheter. (Z-wave lifeline)"
+        }
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "Start the exclusion mode on the Z-Wave controller.\nOperate the handle six times within three seconds. The device will now be removed from the Z-Wave-network.",
+        "sv": "Starta exkluderingen.\nÖppna och stäng sedan handtaget sex gånger inom loppet av tre sekunder. Enheten kommer då att bli bortkopplad från Z-wave nätverket."
+      }
+    },
+    "settings": [
+      {
+        "id": "low_battery",
+        "zwave": {
+          "index": 32,
+          "size": 1
+        },
+        "type": "number",
+        "value": 20,
+        "attr": {
+          "min": 10,
+          "max": 50
+        },
+        "label": {
+          "en": "Low battery warning level",
+          "sv": "Låg batterinivå",
+          "nl": "Waarschuwingsniveau batterij"
+        },
+        "hint": {
+          "en": "This parameter defines a battery level to trigger the battery alarm.\nDefault: 20 %, Range: 10 - 50 %",
+          "sv": "Denna parameter anger vid vilken nivå ett larm om lågt batteri ska aktiveras.\nStandard: 20%, Möjligt värde: 10 - 50%",
+          "nl": "Deze parameter bepaald het batterijniveau waarop het batterij alarm ingeschakeld wordt.\nStandaard: 20 %, Bereik: 10 - 50 %"
+        }
+      }
+    ]
+  }
+}
